@@ -47,9 +47,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid #5193ea; outline-offs
 .brand img { display: block; border-radius: 13px; }
 .brand-light { font-weight: 500; }
 .brand .brand-wordmark { height: 18px; width: auto; border-radius: 0; }
-.wordmark-dark { display: none; }
-:root[data-theme="dark"] .wordmark-dark { display: block; }
-:root[data-theme="dark"] .wordmark-light { display: none; }
+.wordmark-dark, .brand .wordmark-dark { display: none; }
+:root[data-theme="dark"] .wordmark-dark, :root[data-theme="dark"] .brand .wordmark-dark { display: block; }
+:root[data-theme="dark"] .wordmark-light, :root[data-theme="dark"] .brand .wordmark-light { display: none; }
 .brand-dot, .footer-brand span { color: #e5c900; }
 .desktop-nav { display: flex; align-items: center; gap: 40px; margin-left: 74px; }
 .desktop-nav a { color: var(--ink-soft); font-size: 13px; font-weight: 650; transition: opacity .2s; }
