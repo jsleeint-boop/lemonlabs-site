@@ -54,6 +54,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid #5193ea; outline-offs
 .desktop-nav { display: flex; align-items: center; gap: 40px; margin-left: 74px; }
 .desktop-nav a { color: var(--ink-soft); font-size: 13px; font-weight: 650; transition: opacity .2s; }
 .desktop-nav a:hover { opacity: .48; }
+.desktop-nav a[aria-current="page"] { color: var(--ink); position: relative; }
+.desktop-nav a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; border-radius: 2px; background: var(--accent); }
 .header-actions { display: flex; align-items: center; gap: 10px; }
 .icon-button { width: 43px; height: 43px; padding: 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--tile); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; transition: transform .2s, background .2s; }
 .icon-button:hover { transform: translateY(-2px); }
@@ -68,6 +70,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid #5193ea; outline-offs
 .mobile-nav { padding: 10px 15px 20px; margin: -7px 0 14px; border-radius: 20px; border: 1px solid var(--border); background: var(--tile); box-shadow: var(--shadow); }
 .mobile-nav a { display: flex; justify-content: space-between; padding: 13px 8px; font-weight: 800; border-bottom: 1px solid var(--border); }
 .mobile-nav a:last-child { border-bottom: 0; }
+.mobile-nav a[aria-current="page"] { color: #b08d00; }
+:root[data-theme="dark"] .mobile-nav a[aria-current="page"] { color: var(--accent); }
 
 /* Hero tiles */
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.43fr) minmax(0, 1fr); gap: 17px; }
@@ -280,6 +284,7 @@ a.step:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,.1
 .biz-wide { grid-column: span 2; }
 .biz-grid > div { min-width: 0; }
 .biz-grid dt { font-size: 9px; letter-spacing: .08em; font-weight: 800; color: var(--muted); margin-bottom: 6px; }
+.biz-grid dd a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .biz-grid dd { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: -.02em; color: var(--ink-soft); overflow-wrap: anywhere; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 0 1px 40px; font-size: 11px; color: var(--muted); }
 .footer-brand { font-size: 17px; font-weight: 950; letter-spacing: -.07em; color: var(--ink); }

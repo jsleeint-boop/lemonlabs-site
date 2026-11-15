@@ -1,5 +1,5 @@
 // LemonLabs landing page: no build tools or external JavaScript libraries needed.
-// Replace the placeholder project copy with your confirmed public information.
+// Shared by every page: theme toggle, mobile menu, external-link config, contact form, scroll reveal.
 
 const root = document.documentElement;
 const themeToggle = document.querySelector('.theme-toggle');
@@ -42,37 +42,7 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') setMenuOpen(false);
 });
 
-// Content shown in the details dialog. Edit this map to update the project copy.
-const projects = {
-  naite: {
-    kicker: '01 / AI EDUCATION',
-    title: 'nAIté',
-    description: '대격변 AI 시대, 나이테와 함께 한겹씩 성장해가며 내가 원하는 미래를 쟁취하세요.',
-    tags: 'AI Education · Prompting · Workflow'
-  },
-  studio: {
-    kicker: '02 / COLLEGE',
-    title: 'narU',
-    description: '나루(narU)는 대학 진학을 준비하는 학생이 건너야 할 강을 함께 건너는 레몬랩스의 입시 교육 브랜드입니다. 나루논술연구소에서는 논술과 글쓰기의 기본기를 다지고, 나루크루즈캠프 SCC에서는 집중 캠프로 실전 감각을 끌어올립니다. 한 사람 한 사람의 진로에 맞춘 안내로 원하는 대학까지 이어 드립니다.',
-    tags: 'College · Essay · Camp'
-  },
-  party: {
-    kicker: '03 / PLAY',
-    title: 'LEMONori',
-    description: '내 손 안에서 나만의 세상을 키워보세요. 장난감, 생활용품 등 특색 넘치는 제품으로 일상에 즐거움을 더하는 레몬랩스의 놀이 브랜드입니다.',
-    tags: 'Play · Toys · Lifestyle'
-  },
-  lab: {
-    kicker: '04 / THE NEXT THING',
-    title: 'Open Lab',
-    description: '아직 완성된 이름이 없어도 괜찮습니다. 문제를 관찰하고, 작은 프로토타입으로 가설을 시험하고, 의미 있는 결과가 보이면 제품과 프로젝트로 발전시킵니다.',
-    tags: 'Research · Prototype · Experiment'
-  }
-};
-
-const projectDialog = document.querySelector('#project-dialog');
-const contactDialog = document.querySelector('#contact-dialog');
-
+// Dialog helpers (used for the "coming soon" notice on links that are not connected yet).
 function openDialog(dialog) {
   if (!dialog) return;
   if (typeof dialog.showModal === 'function') dialog.showModal();
@@ -83,24 +53,108 @@ function closeDialog(dialog) {
   if (typeof dialog.close === 'function') dialog.close();
   else dialog.removeAttribute('open');
 }
-
-document.querySelectorAll('[data-open-project]').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = projects[button.dataset.openProject];
-    if (!item || !projectDialog) return;
-    document.querySelector('#dialog-kicker').textContent = item.kicker;
-    document.querySelector('#dialog-title').textContent = item.title;
-    document.querySelector('#dialog-description').textContent = item.description;
-    document.querySelector('#dialog-tags').textContent = item.tags;
-    openDialog(projectDialog);
-  });
-});
-
-document.querySelector('#contact-button')?.addEventListener('click', () => openDialog(contactDialog));
 document.querySelectorAll('.info-dialog').forEach(dialog => {
   dialog.querySelectorAll('.dialog-close, .dialog-confirm').forEach(btn => btn.addEventListener('click', () => closeDialog(dialog)));
   dialog.addEventListener('click', event => { if (event.target === dialog) closeDialog(dialog); });
 });
+
+// External links come from config.js. An empty value means "not connected yet":
+// the link shows a SOON badge and opens a notice instead of navigating.
+const config = window.LEMON_CONFIG || {};
+const extLinks = config.links || {};
+const pendingDialog = document.querySelector('#pending-dialog');
+document.querySelectorAll('[data-ext]').forEach(link => {
+  const url = extLinks[link.dataset.ext];
+  if (url) {
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.classList.remove('is-pending');
+    return;
+  }
+  if (link.hasAttribute('data-hide-if-empty')) { link.hidden = true; return; }
+  link.classList.add('is-pending');
+  link.setAttribute('aria-describedby', 'pending-dialog-title');
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const label = document.querySelector('#pending-dialog-label');
+    if (label) label.textContent = link.dataset.extLabel || link.textContent.trim();
+    if (pendingDialog) openDialog(pendingDialog);
+  });
+});
+
+// Contact page: preselect the topic from ?topic=... and show it in the hero.
+const topicSelect = document.querySelector('#f-topic');
+if (topicSelect) {
+  const topic = new URLSearchParams(location.search).get('topic');
+  const option = topic && topicSelect.querySelector(`option[value="${CSS.escape(topic)}"]`);
+  if (option) {
+    topicSelect.value = topic;
+    const pill = document.querySelector('#topic-pill');
+    const pillLabel = document.querySelector('#topic-pill-label');
+    if (pill && pillLabel) { pillLabel.textContent = option.textContent; pill.hidden = false; }
+  }
+}
+
+// Contact form: posts to config.formEndpoint when set, otherwise opens the visitor's mail app
+// with the message prefilled. No server is required for the mail fallback.
+const inquiryForm = document.querySelector('#inquiry-form');
+if (inquiryForm) {
+  const status = document.querySelector('#form-status');
+  const submit = inquiryForm.querySelector('.form-submit');
+  const setStatus = (text, state) => {
+    if (!status) return;
+    status.textContent = text;
+    status.classList.toggle('is-error', state === 'error');
+    status.classList.toggle('is-ok', state === 'ok');
+  };
+  inquiryForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!inquiryForm.checkValidity()) {
+      inquiryForm.reportValidity();
+      setStatus('필수 항목을 확인해 주세요.', 'error');
+      return;
+    }
+    const data = new FormData(inquiryForm);
+    if (data.get('website')) return; // honeypot filled by a bot
+    const topicLabel = topicSelect?.selectedOptions[0]?.textContent || '일반 문의';
+    const name = String(data.get('name') || '').trim();
+    const subject = `[LemonLabs 문의] ${topicLabel} - ${name}`;
+    const body = [
+      `문의 유형: ${topicLabel}`,
+      `이름: ${name}`,
+      `연락처: ${data.get('phone') || '-'}`,
+      `이메일: ${data.get('email')}`,
+      '',
+      '문의 내용:',
+      String(data.get('message') || '').trim(),
+      '',
+      `보낸 페이지: ${location.href}`
+    ].join('\n');
+
+    if (config.formEndpoint) {
+      submit && (submit.disabled = true);
+      setStatus('전송 중입니다…');
+      try {
+        data.set('_subject', subject);
+        data.set('topic_label', topicLabel);
+        const response = await fetch(config.formEndpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error(String(response.status));
+        inquiryForm.reset();
+        setStatus('문의가 접수되었습니다. 확인 후 답변드리겠습니다.', 'ok');
+      } catch (_) {
+        setStatus('전송에 실패했습니다. 잠시 후 다시 시도하거나 이메일로 보내 주세요.', 'error');
+      } finally {
+        submit && (submit.disabled = false);
+      }
+      return;
+    }
+
+    const to = config.email || 'jsleeint@gmail.com';
+    location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus('메일 앱이 열립니다. 열리지 않으면 ' + to + ' 로 직접 보내 주세요.', 'ok');
+  });
+}
 
 // Progressive enhancement: animations are skipped for users who request less motion.
 const revealItems = document.querySelectorAll('.reveal');
