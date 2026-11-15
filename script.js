@@ -151,3 +151,10 @@ filterChips.forEach(chip => chip.addEventListener('click', () => {
     card.classList.toggle('is-hidden', want !== 'all' && card.dataset.cat !== want);
   });
 }));
+
+// Brand pages always open at the very top unless a section hash is given.
+if (document.body.classList.contains('brand-page') && (!location.hash || location.hash === '#top')) {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+  window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
+}
