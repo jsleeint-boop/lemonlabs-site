@@ -432,6 +432,10 @@ body:has(.reveal.is-visible) .reveal:not(.is-visible) { opacity: 0; transform: t
 .brand-naite { --brand-bg: #16231f; --brand-ink: #f2f8ef; --brand-muted: #b9cbbf; --brand-accent: #fdc71e; --brand-accent-ink: #17211b; }
 .brand-naru { --brand-bg: #dfe4ff; --brand-ink: #1b2344; --brand-muted: #4f5c8a; --brand-accent: #1b2344; --brand-accent-ink: #eef1ff; }
 .brand-lemonori { --brand-bg: #ffcabc; --brand-ink: #49261b; --brand-muted: #754738; --brand-accent: #e8584a; --brand-accent-ink: #fff5e9; }
+.brand-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+.parent-brand { display: inline-flex; opacity: .75; transition: opacity .2s; }
+.parent-brand:hover { opacity: 1; }
+.parent-brand img { height: 11px; width: auto; vertical-align: top; }
 .brand-own { gap: 12px; }
 .brand-own .brand-icon { width: 42px; height: 42px; border-radius: 13px; flex: none; }
 .brand-own .brand-icon svg { width: 25px; height: 25px; }
