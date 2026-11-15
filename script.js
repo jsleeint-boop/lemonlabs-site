@@ -118,3 +118,36 @@ if ('IntersectionObserver' in window && !reducedMotion) {
 } else {
   revealItems.forEach(item => item.classList.add('is-visible'));
 }
+
+// Brand pages: enquiry form (no backend yet) and product filter.
+document.querySelectorAll('.apply-form').forEach(form => {
+  const note = form.querySelector('.form-note');
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const name = form.querySelector('[name="name"]');
+    const phone = form.querySelector('[name="phone"]');
+    const agree = form.querySelector('[name="agree"]');
+    const missing = [];
+    if (!name?.value.trim()) missing.push('이름');
+    if (!phone?.value.trim()) missing.push('연락처');
+    if (agree && !agree.checked) missing.push('개인정보 동의');
+    if (!note) return;
+    if (missing.length) {
+      note.textContent = `${missing.join(', ')}을(를) 확인해 주세요.`;
+      note.classList.add('is-error');
+      return;
+    }
+    note.classList.remove('is-error');
+    note.textContent = `${name.value.trim()}님, 신청 내용을 받았습니다. 정식 오픈 전이라 저장되지는 않으니 급한 문의는 전화로 부탁드립니다.`;
+    form.reset();
+  });
+});
+
+const filterChips = document.querySelectorAll('.filter-chip');
+filterChips.forEach(chip => chip.addEventListener('click', () => {
+  filterChips.forEach(c => c.classList.toggle('is-active', c === chip));
+  const want = chip.dataset.filter;
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.classList.toggle('is-hidden', want !== 'all' && card.dataset.cat !== want);
+  });
+}));
