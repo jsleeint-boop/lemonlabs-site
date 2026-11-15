@@ -53,8 +53,8 @@ const projects = {
   studio: {
     kicker: '02 / COLLEGE',
     title: 'narU',
-    description: '브랜드의 생각을 시각적 경험으로 바꿉니다. 영상, 그래픽, 인터랙티브 콘텐츠 등 다양한 표현 방식을 실험하는 크리에이티브 영역입니다. 현재 페이지는 방향성을 소개하는 콘셉트입니다.',
-    tags: 'Branding · Design · Content'
+    description: '나루(narU)는 대학 진학을 준비하는 학생이 건너야 할 강을 함께 건너는 레몬랩스의 입시 교육 브랜드입니다. 나루논술연구소에서는 논술과 글쓰기의 기본기를 다지고, 나루크루즈캠프 SCC에서는 집중 캠프로 실전 감각을 끌어올립니다. 한 사람 한 사람의 진로에 맞춘 안내로 원하는 대학까지 이어 드립니다.',
+    tags: 'College · Essay · Camp'
   },
   party: {
     kicker: '03 / PLAY',
