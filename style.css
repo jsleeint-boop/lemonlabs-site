@@ -132,10 +132,8 @@ a.floating-label:hover { box-shadow: 0 12px 26px rgba(81,69,0,.16); }
 .floating-label-mid:hover { transform: rotate(7deg) translateY(-3px); }
 .floating-label-bottom:hover { transform: rotate(-6deg) translateY(-3px); }
 .floating-label-top { left: 7%; top: 19%; transform: rotate(-9deg); }
-.label-icon { font-size: 14px; margin-right: 5px; }
 .floating-label-mid { right: 5%; top: 22%; transform: rotate(7deg); }
 .floating-label-bottom { left: 3%; bottom: 13%; transform: rotate(-6deg); }
-.floating-label-bottom span { margin-left: 13px; font-size: 14px; }
 
 /* Section headings */
 .projects-section { margin-top: 98px; }
