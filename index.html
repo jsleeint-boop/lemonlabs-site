@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LemonLabs. 신선한 아이디어를 빠른 실행으로 연결하는 크리에이티브 실험실. AI 제품, 브랜드 경험, 커뮤니티 프로젝트를 만듭니다.">
+  <meta name="theme-color" content="#f6f7f2">
+  <title>LemonLabs | Lab it, Launch it.</title>
+  <link rel="icon" href="assets/lemon-mark.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <div class="page-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="레몬랩스 홈페이지 맨 위로">
+        <img src="assets/lemon-mark.png" alt="" width="42" height="42">
+        <img class="brand-wordmark wordmark-light" src="assets/lemon-wordmark.png" alt="" height="18"><img class="brand-wordmark wordmark-dark" src="assets/lemon-wordmark-dark.png" alt="" height="18">
+      </a>
+
+      <nav class="desktop-nav" aria-label="주 메뉴">
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="다크 모드 켜기" title="테마 전환">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20.6 15.2A8.7 8.7 0 0 1 8.8 3.4a8.8 8.8 0 1 0 11.8 11.8Z" stroke-linejoin="round"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="3.8"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M2 12h2m16 0h2M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"/></svg>
+        </button>
+        <a class="header-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="메뉴 열기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden>
+      <a href="#projects">Projects <span>↗</span></a>
+      <a href="#approach">Approach <span>↗</span></a>
+      <a href="#contact">Contact <span>↗</span></a>
+    </nav>
+
+    <main id="main">
+      <section class="hero-grid" aria-label="레몬랩스 소개">
+        <div class="hero-copy tile reveal">
+          <div class="eyebrow"><span class="small-spark" aria-hidden="true">✳</span> LEMONLABS: FRESH &amp; UNIQUE</div>
+          <h1><span class="hero-l">L</span>ab it .<br><span class="hero-l">L</span>aunch it <span class="period">.</span></h1>
+          <p class="hero-description">신선하고 유니크한 서비스로<br>더 나은 세상을 만들어갑니다.</p>
+          <div class="hero-tags"><span>AI교육</span><span>대학입시</span><span>놀이</span></div>
+          <div class="hero-bottom">
+            <a class="round-link" href="#projects"><span class="round-link-circle" aria-hidden="true">↘</span><span>프로젝트 둘러보기</span></a>
+            <div class="micro-copy"><span class="micro-line"></span> BUILD WHAT'S NEXT<br>WITH LEMONLABS</div>
+          </div>
+        </div>
+
+        <div class="hero-art tile reveal" aria-label="레몬랩스 브랜드 그래픽">
+          <div class="art-top"><span>THINK FRESH.</span><span class="orbit-tiny" aria-hidden="true">✳</span></div>
+          <div class="hero-illustration">
+            <svg class="lemon-scene" viewBox="0 0 440 380" aria-hidden="true">
+              <defs>
+                <radialGradient id="lemonSkin" cx="34%" cy="28%" r="80%"><stop offset="0" stop-color="#fff2a8"/><stop offset=".18" stop-color="#ffd84a"/><stop offset=".6" stop-color="#f4b916"/><stop offset="1" stop-color="#c9820a"/></radialGradient>
+                <linearGradient id="leafSkin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6aa84f"/><stop offset="1" stop-color="#3f7a2f"/></linearGradient>
+                <filter id="softBlur" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="9"/></filter>
+              </defs>
+              <ellipse cx="226" cy="342" rx="172" ry="20" fill="#8a6a00" opacity=".28" filter="url(#softBlur)"/>
+              <g class="orbit-group" transform="translate(220 200) rotate(-10)">
+                <ellipse class="orbit-ring orbit-back" rx="170" ry="40" pathLength="100"/>
+                <g class="rocket rocket-back" transform="scale(1.3)"><path class="flame" d="M-16,-4 L-32,0 L-16,4 Z"/><path class="fin" d="M-16,-7 L-25,-15 L-9,-7 Z"/><path class="fin" d="M-16,7 L-25,15 L-9,7 Z"/><path class="rocket-body" d="M-16,-7 L8,-7 Q21,0 8,7 L-16,7 Z"/><circle class="rocket-window" cx="3" cy="0" r="3.4"/></g>
+              </g>
+              <g class="lemon-float">
+                <g transform="rotate(-30 220 200)">
+                  <ellipse cx="220" cy="200" rx="136" ry="101" fill="url(#lemonSkin)"/>
+                  <ellipse cx="80" cy="200" rx="19" ry="12" fill="#f0b315"/>
+                  <ellipse cx="360" cy="200" rx="19" ry="12" fill="#f6c21c"/>
+                  <ellipse cx="172" cy="154" rx="44" ry="18" fill="#fff7c4" opacity=".55" transform="rotate(-18 172 154)"/>
+                </g>
+                <g transform="translate(119 90)">
+                  <g transform="rotate(-20)"><path class="leaf" d="M0 0 C 26 -34, 62 -34, 76 -8 C 56 12, 22 18, 0 0 Z" fill="url(#leafSkin)"/></g>
+                  <g transform="translate(30 18) rotate(26)"><path class="leaf leaf-two" d="M0 0 C 26 -34, 62 -34, 76 -8 C 56 12, 22 18, 0 0 Z" fill="url(#leafSkin)"/></g>
+                </g>
+              </g>
+              <g class="orbit-group" transform="translate(220 200) rotate(-10)">
+                <ellipse class="orbit-ring orbit-front" rx="170" ry="40" pathLength="100"/>
+                <g class="rocket rocket-front" transform="scale(1.3)"><path class="flame" d="M-16,-4 L-32,0 L-16,4 Z"/><path class="fin" d="M-16,-7 L-25,-15 L-9,-7 Z"/><path class="fin" d="M-16,7 L-25,15 L-9,7 Z"/><path class="rocket-body" d="M-16,-7 L8,-7 Q21,0 8,7 L-16,7 Z"/><circle class="rocket-window" cx="3" cy="0" r="3.4"/></g>
+              </g>
+            </svg>
+            <span class="orb orb-a" aria-hidden="true"></span><span class="orb orb-b" aria-hidden="true"></span><span class="orb orb-c" aria-hidden="true"></span>
+            <a class="floating-label floating-label-top" href="#naite" aria-label="nAIté 소개로 이동">nAIté</a>
+            <a class="floating-label floating-label-mid" href="#naru" aria-label="narU 소개로 이동">narU</a>
+            <a class="floating-label floating-label-bottom" href="#lemonori" aria-label="LEMONori 소개로 이동">LEMONori</a>
+          </div>
+          <div class="art-bottom"><span>BUILD FAST.</span><span>ⓒ LEMONLABS</span></div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section" aria-labelledby="projects-title">
+        <div class="section-heading reveal">
+          <div><p class="section-kicker"><span class="kicker-line"></span> OUR LABORATORY</p><h2 id="projects-title">상상을 현실로 ,<br>더 나은 미래 <span class="period">.</span></h2></div>
+          <p class="section-summary">AI 교육, 대학입시, 놀이까지.<br>서로 다른 시도를 하나의 실행력으로 연결합니다.</p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="project-card card-ai reveal" id="naite" data-project="naite">
+            <div class="card-top"><span class="card-number">01 / AI EDUCATION</span><span class="status-pill"><span class="status-dot"></span> IN DEVELOPMENT</span></div>
+            <div class="ai-card-content"><p class="card-eyebrow">nAIté 나이테</p><h3>AI와 함께<br>시나브로 성장하다</h3><p>대격변 AI 시대,<br>나이테와 함께 한겹씩 성장해가며<br>내가 원하는 미래를 쟁취하세요</p></div>
+            <div class="rings-steps">
+              <span class="steps-caption">nAIté 프로그램</span>
+              <ul class="step-list">
+                <li class="step"><span class="step-leaf"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="leafFresh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4f9a3f"/><stop offset=".55" stop-color="#7cc45a"/><stop offset="1" stop-color="#a8df7a"/></linearGradient></defs><path d="M4.5 19.5 C 4.8 11.5, 10 5, 19.5 4.5 C 18.6 12.5, 12.5 18.2, 4.5 19.5 Z" fill="url(#leafFresh)"/><path d="M19.5 4.5 C 17.4 5.3, 16.3 7, 16.9 9 C 17.9 7.6, 18.8 6.2, 19.5 4.5 Z" fill="#3f7f33"/><path d="M5.2 18.8 C 9 15, 13 11, 18.2 5.8" fill="none" stroke="#e9f7d6" stroke-width="1" stroke-linecap="round" opacity=".8"/><path d="M8.5 15.5 c 1.5 -0.4 2.6 -0.9 3.6 -1.8 M11 12.8 c 1.4 -0.5 2.3 -1 3.2 -1.9" fill="none" stroke="#e9f7d6" stroke-width=".8" stroke-linecap="round" opacity=".55"/></svg></span><span>nAIté 초중등 클래스</span></li>
+                <li class="step"><span class="step-leaf"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="leafFresh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4f9a3f"/><stop offset=".55" stop-color="#7cc45a"/><stop offset="1" stop-color="#a8df7a"/></linearGradient></defs><path d="M4.5 19.5 C 4.8 11.5, 10 5, 19.5 4.5 C 18.6 12.5, 12.5 18.2, 4.5 19.5 Z" fill="url(#leafFresh)"/><path d="M19.5 4.5 C 17.4 5.3, 16.3 7, 16.9 9 C 17.9 7.6, 18.8 6.2, 19.5 4.5 Z" fill="#3f7f33"/><path d="M5.2 18.8 C 9 15, 13 11, 18.2 5.8" fill="none" stroke="#e9f7d6" stroke-width="1" stroke-linecap="round" opacity=".8"/><path d="M8.5 15.5 c 1.5 -0.4 2.6 -0.9 3.6 -1.8 M11 12.8 c 1.4 -0.5 2.3 -1 3.2 -1.9" fill="none" stroke="#e9f7d6" stroke-width=".8" stroke-linecap="round" opacity=".55"/></svg></span><span>nAIté IoT 클래스</span></li>
+                <li class="step"><span class="step-leaf"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="leafFresh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4f9a3f"/><stop offset=".55" stop-color="#7cc45a"/><stop offset="1" stop-color="#a8df7a"/></linearGradient></defs><path d="M4.5 19.5 C 4.8 11.5, 10 5, 19.5 4.5 C 18.6 12.5, 12.5 18.2, 4.5 19.5 Z" fill="url(#leafFresh)"/><path d="M19.5 4.5 C 17.4 5.3, 16.3 7, 16.9 9 C 17.9 7.6, 18.8 6.2, 19.5 4.5 Z" fill="#3f7f33"/><path d="M5.2 18.8 C 9 15, 13 11, 18.2 5.8" fill="none" stroke="#e9f7d6" stroke-width="1" stroke-linecap="round" opacity=".8"/><path d="M8.5 15.5 c 1.5 -0.4 2.6 -0.9 3.6 -1.8 M11 12.8 c 1.4 -0.5 2.3 -1 3.2 -1.9" fill="none" stroke="#e9f7d6" stroke-width=".8" stroke-linecap="round" opacity=".55"/></svg></span><span>nAIté 메타인지 테스트</span></li>
+              </ul>
+            </div>
+            <div class="talk-visual" aria-hidden="true">
+              <svg class="talk-svg" viewBox="0 0 360 300">
+                <ellipse cx="75" cy="276" rx="62" ry="6" fill="#000" opacity=".28"/>
+                <ellipse cx="306" cy="270" rx="38" ry="6" fill="#000" opacity=".28"/>
+                <rect x="118" y="30" width="150" height="130" rx="6" fill="#b98a4a"/>
+                <rect x="125" y="37" width="136" height="116" rx="3" fill="#1e3a2d"/>
+                <g fill="none" stroke="#f4f6ec" stroke-opacity=".5" stroke-width="1.4"><circle cx="145" cy="58" r="4"/><circle cx="145" cy="58" r="8.5"/><circle cx="145" cy="58" r="13"/></g>
+                <text class="chalk-text" x="193" y="112" text-anchor="middle" font-size="46" font-weight="900" fill="#f4f6ec" transform="rotate(-2 193 108)">nAIté</text>
+                <path d="M146 124 q47 9 94 0" fill="none" stroke="#f4f6ec" stroke-width="2.2" stroke-linecap="round" opacity=".75"/>
+                <rect x="125" y="152" width="136" height="8" fill="#a2773d"/>
+                <rect x="170" y="148" width="14" height="4" rx="1" fill="#fff"/>
+                <g class="person">
+                  <ellipse cx="75" cy="258" rx="58" ry="20" fill="#2f3a44"/>
+                  <path d="M40 254 q35 -26 70 0" fill="none" stroke="#3c4854" stroke-width="12" stroke-linecap="round"/>
+                  <ellipse cx="28" cy="262" rx="10" ry="6" fill="#1b2320"/><ellipse cx="122" cy="262" rx="10" ry="6" fill="#1b2320"/>
+                  <rect x="48" y="178" width="54" height="78" rx="22" fill="#f8e548"/>
+                  <path d="M52 196 L40 238" stroke="#f8e548" stroke-width="11" stroke-linecap="round"/>
+                  <circle cx="39" cy="242" r="6.5" fill="#f1c9a5"/>
+                  <path d="M98 196 L112 222" stroke="#f8e548" stroke-width="11" stroke-linecap="round"/>
+                  <g class="hand-gesture">
+                    <path d="M112 222 L128 198" stroke="#f8e548" stroke-width="11" stroke-linecap="round"/>
+                    <circle cx="131" cy="191" r="7.5" fill="#f1c9a5"/>
+                    <path d="M127 184 l-2 -6 M132 183 l0 -6 M136 185 l3 -5 M138 190 l5 -2" stroke="#f1c9a5" stroke-width="3" stroke-linecap="round"/>
+                  </g>
+                  <circle cx="75" cy="156" r="22" fill="#f1c9a5"/>
+                  <path d="M53 152 a22 22 0 0 1 44 0 v5 q-22 -13 -44 0z" fill="#2b2320"/>
+                  <circle cx="68" cy="156" r="1.9" fill="#2b2320"/><circle cx="82" cy="156" r="1.9" fill="#2b2320"/>
+                  <path class="mouth" d="M68 163 q8 10 16 0 z" fill="#2b2320"/>
+                  <g class="laugh-mark" transform="translate(50 131) rotate(-18)" stroke="#f4f6ec" stroke-opacity=".5" stroke-width="2.2" stroke-linecap="round"><path d="M-7 -3h14M-7 3h14M-3 -7v14M3 -7v14"/></g>
+                  <g class="laugh-mark laugh-two" transform="translate(37 153) rotate(14) scale(.75)" stroke="#f4f6ec" stroke-opacity=".5" stroke-width="2.2" stroke-linecap="round"><path d="M-7 -3h14M-7 3h14M-3 -7v14M3 -7v14"/></g>
+                </g>
+                <g class="robot">
+                  <rect x="291" y="232" width="12" height="30" rx="4" fill="#9fb0a7"/><rect x="309" y="232" width="12" height="30" rx="4" fill="#9fb0a7"/>
+                  <ellipse cx="297" cy="263" rx="10" ry="4" fill="#6f7f77"/><ellipse cx="315" cy="263" rx="10" ry="4" fill="#6f7f77"/>
+                  <path d="M335 178 L343 216" stroke="#c9d5cf" stroke-width="10" stroke-linecap="round"/><circle cx="343" cy="220" r="7" fill="#e4ece7"/>
+                  <rect x="277" y="164" width="58" height="72" rx="16" fill="#e4ece7"/>
+                  <rect x="291" y="180" width="30" height="20" rx="6" fill="#16231f"/>
+                  <circle class="robot-light" cx="299" cy="190" r="3" fill="#f8e548"/><circle class="robot-light light-two" cx="311" cy="190" r="3" fill="#f8e548"/>
+                  <rect x="300" y="154" width="12" height="12" fill="#9fb0a7"/>
+                  <path d="M306 112 V98" stroke="#9fb0a7" stroke-width="3" stroke-linecap="round"/><circle class="robot-light" cx="306" cy="94" r="5" fill="#f8e548"/>
+                  <rect x="281" y="112" width="50" height="44" rx="14" fill="#e4ece7"/>
+                  <rect x="283" y="122" width="34" height="22" rx="8" fill="#16231f"/>
+                  <ellipse class="robot-eye" cx="294" cy="133" rx="4" ry="5" fill="#f8e548"/><ellipse class="robot-eye" cx="308" cy="133" rx="4" ry="5" fill="#f8e548"/>
+                  <g class="robot-arm">
+                    <path d="M277 176 L262 162 L251 140" fill="none" stroke="#c9d5cf" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="250" cy="137" r="7.5" fill="#e4ece7"/>
+                    <rect x="241" y="121" width="5" height="16" rx="1.5" fill="#fff" transform="rotate(30 243 129)"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <button class="card-open" type="button" data-open-project="naite" aria-label="nAIté 프로젝트 자세히 보기"><span>프로젝트 보기</span><span class="arrow-circle" aria-hidden="true">↗</span></button>
+          </article>
+
+          <article class="project-card card-studio reveal" id="naru" data-project="studio">
+            <div class="card-top"><span class="card-number">02 / COLLEGE</span><span class="card-small-icon" aria-hidden="true">↗</span></div>
+            <div class="studio-art" aria-hidden="true"><span class="studio-star star-one">✳</span><svg class="studio-scene" viewBox="0 0 200 170">
+                <defs><linearGradient id="boardShine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d4fa2"/><stop offset="1" stop-color="#1b2344"/></linearGradient></defs>
+                <g class="scroll" transform="rotate(20 146 104)">
+                  <rect x="128" y="48" width="36" height="106" rx="4" fill="#f5eed6" stroke="#cdbd8f" stroke-width="1.5"/>
+                  <path d="M128 154 a18 7 0 0 0 36 0" fill="#e8dfb9" stroke="#cdbd8f" stroke-width="1.5"/>
+                  <path d="M136 66h20M136 74h14M136 124h20M136 132h12" stroke="#ddd2a8" stroke-width="2" stroke-linecap="round"/>
+                  <ellipse cx="146" cy="48" rx="18" ry="7" fill="#e8dfb9" stroke="#cdbd8f" stroke-width="1.5"/>
+                  <ellipse cx="146" cy="48" rx="7" ry="2.8" fill="#d4c595"/>
+                  <rect x="124" y="94" width="44" height="13" rx="3" fill="#5c76db"/>
+                  <path d="M146 100.5 l-13 -8 v16 z M146 100.5 l13 -8 v16 z" fill="#3d4fa2"/>
+                  <circle cx="146" cy="100.5" r="3.5" fill="#1b2344"/>
+                </g>
+                <g class="cap">
+                  <path d="M56 72 a44 24 0 0 1 88 0 v42 a44 20 0 0 1 -88 0 z" fill="#1b2344"/>
+                  <path d="M56 100 a44 20 0 0 0 88 0" fill="none" stroke="#2c3a6e" stroke-width="2"/>
+                  <polygon points="20,60 100,30 180,60 100,90" fill="url(#boardShine)"/>
+                  <polygon points="20,60 100,30 180,60 100,64" fill="#4a5fb8" opacity=".35"/>
+                  <circle cx="100" cy="60" r="4.5" fill="#f8e548"/>
+                  <g class="tassel"><path d="M100 60 L40 68 L36 104" fill="none" stroke="#f8e548" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 104 L44 104 L41 126 L31 126 Z" fill="#f8e548"/><path d="M32 108v16M36 108v18M40 108v16" stroke="#d6b900" stroke-width="1.4" stroke-linecap="round"/></g>
+                </g>
+              </svg><span class="studio-star star-two">✦</span><div class="studio-sticker">GOOD IDEAS<br>LOOK GOOD.</div></div>
+            <div class="studio-content"><p class="card-eyebrow">narU 나루</p><h3>대학 진학,<br>narU와 함께 건너가세요</h3><div class="rings-steps">
+              <span class="steps-caption">narU 프로그램</span>
+              <ul class="step-list">
+                <li class="step"><span class="step-cap"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="2,10 12,5 22,10 12,15" fill="#eef1ff"/><path d="M7 12.5v4c0 1.4 2.3 2.5 5 2.5s5-1.1 5-2.5v-4L12 15z" fill="#c9d2ff"/><path d="M21 10.5v6" stroke="#f8e548" stroke-width="1.6" stroke-linecap="round"/><circle cx="21" cy="17.5" r="1.4" fill="#f8e548"/></svg></span><span>나루논술연구소</span></li>
+                <li class="step"><span class="step-cap"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="2,10 12,5 22,10 12,15" fill="#eef1ff"/><path d="M7 12.5v4c0 1.4 2.3 2.5 5 2.5s5-1.1 5-2.5v-4L12 15z" fill="#c9d2ff"/><path d="M21 10.5v6" stroke="#f8e548" stroke-width="1.6" stroke-linecap="round"/><circle cx="21" cy="17.5" r="1.4" fill="#f8e548"/></svg></span><span>나루크루즈캠프 SCC</span></li>
+              </ul>
+            </div></div>
+            <button class="card-open" type="button" data-open-project="studio" aria-label="narU 프로젝트 자세히 보기"><span>프로젝트 보기</span><span class="arrow-circle" aria-hidden="true">↗</span></button>
+          </article>
+
+          <article class="project-card card-party reveal" id="lemonori" data-project="party">
+            <div class="card-top"><span class="card-number">03 / PLAY</span><span class="asterisk-symbol" aria-hidden="true">✳</span></div>
+            <div class="party-art" aria-hidden="true"><svg class="blocks-svg" viewBox="0 0 300 190" aria-hidden="true">
+                <defs>
+                  <radialGradient id="ballGloss" cx="34%" cy="28%" r="72%"><stop offset="0" stop-color="#ffffff" stop-opacity=".7"/><stop offset=".4" stop-color="#9fd8f8" stop-opacity=".1"/><stop offset="1" stop-color="#1f5f8c" stop-opacity=".45"/></radialGradient>
+                </defs>
+                <g transform="translate(88.1 98.9) scale(1.5)">
+                  <ellipse cx="41.3" cy="46.5" rx="84" ry="9" fill="#7a3a2a" opacity=".2"/>
+                  <g class="block block-rect">
+                    <polygon points="-24.0,17.6 28.0,30.2 28.0,8.5 -24.0,-4.2" fill="#e2503f" stroke="#c9432f" stroke-width=".6" stroke-linejoin="round"/>
+                    <polygon points="52.0,12.7 28.0,30.2 28.0,8.5 52.0,-9.1" fill="#b4392a" stroke="#9c2f22" stroke-width=".6" stroke-linejoin="round"/>
+                    <polygon points="0.0,-21.8 52.0,-9.1 28.0,8.5 -24.0,-4.2" fill="#f47063" stroke="#d9574a" stroke-width=".6" stroke-linejoin="round"/>
+                  </g>
+                  <g class="block block-circle">
+                    <ellipse cx="7.1" cy="-8.3" rx="19" ry="8" transform="rotate(12 7.1 -8.3)" fill="#7a2a1c" opacity=".28"/>
+                    <circle cx="7.1" cy="-26.4" r="20" fill="#86cdf5"/>
+                    <circle cx="7.1" cy="-26.4" r="20" fill="url(#ballGloss)"/>
+                  </g>
+                  <g class="block block-arch">
+                    <ellipse cx="79.9" cy="34.2" rx="16" ry="6" fill="#7a3a2a" opacity=".22"/>
+                    <polygon points="14.1,5.1 28.1,13.3 31.8,2.1 31.8,2.1 34.0,-2.1 37.2,-5.2 41.3,-7.2 46.0,-7.8 50.9,-7.0 55.8,-4.9 60.3,-1.5 64.1,2.8 66.9,7.7 68.6,13.0 69.0,18.3 68.1,23.2 64.4,34.4 78.4,42.5 89.6,9.1 25.3,-28.4" fill="#fdc71e" stroke="#e0ad12" stroke-width=".6" stroke-linejoin="round"/>
+                    <polygon points="95.4,30.1 78.4,42.5 89.6,9.1 106.6,-3.4" fill="#d49f0c" stroke="#bf8e0a" stroke-width=".6" stroke-linejoin="round"/>
+                    <polygon points="42.3,-40.8 106.6,-3.4 89.6,9.1 25.3,-28.4" fill="#ffd94f" stroke="#e8be2c" stroke-width=".6" stroke-linejoin="round"/>
+                  </g>
+                </g>
+              </svg><span class="party-spark p-two">✦</span></div>
+            <div class="party-content"><p class="card-eyebrow">LEMONori 레몬놀이</p><h3>레몬놀이와 함께<br>즐겁게 놀아봐요!</h3><p>내 손 안에서 나만의 세상을 키워보세요<br>장난감, 생활용품 등 특색 넘치는 제품</p>
+            <div class="rings-steps">
+              <ul class="step-list">
+                <li class="step"><span class="step-store"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="14" width="18" height="6" rx="1.5" fill="#e8584a"/><circle cx="8" cy="9.5" r="4" fill="#86cdf5"/><path d="M13 14v-4a4 4 0 0 1 8 0v4h-3v-3.5a1 1 0 0 0-2 0V14z" fill="#fdc71e"/></svg></span><span>레몬놀이스토어</span></li>
+              </ul>
+            </div></div>
+            <button class="card-open" type="button" data-open-project="party" aria-label="LEMONori 프로젝트 자세히 보기"><span>프로젝트 보기</span><span class="arrow-circle" aria-hidden="true">↗</span></button>
+          </article>
+
+          <article class="project-card card-lab reveal" data-project="lab">
+            <div class="lab-copy"><span class="card-number">04 / THE NEXT THING</span><p class="card-eyebrow">OPEN LAB</p><h3>아직 이름 없는<br>다음 아이디어도.</h3><p>새로운 문제를 발견하고, 빠르게 실험하고, 가능성을 구체화합니다.</p><button class="card-open lab-open" type="button" data-open-project="lab" aria-label="Open Lab 자세히 보기"><span>우리의 접근법 보기</span><span class="arrow-circle" aria-hidden="true">↗</span></button></div>
+            <div class="lab-visual" aria-hidden="true"><div class="lab-ring ring-one"></div><div class="lab-ring ring-two"></div><span class="lab-center">WHAT<br>IF<span>?</span></span><span class="lab-asterisk">✳</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="approach" class="approach-section reveal" aria-labelledby="approach-title">
+        <div class="approach-main"><span class="section-kicker">THE LEMON WAY</span><h2 id="approach-title">Think fresh.<br><span>Build fast.</span></h2></div>
+        <div class="approach-aside"><p>번뜩이는 아이디어가 진짜 가치가 되는 순간은, 실행이 시작될 때라고 믿습니다.</p></div>
+      </section>
+
+      <section id="contact" class="contact-section reveal" aria-labelledby="contact-title">
+        <div><span class="section-kicker">NEXT, TOGETHER</span><h2 id="contact-title">다음 아이디어,<br>함께 만들어볼까요?</h2><p>프로젝트, 협업, 파트너십에 관한 대화를 환영합니다.</p></div>
+        <div class="contact-side"><button class="contact-button" type="button" id="contact-button" aria-haspopup="dialog"><span>협업 문의 안내</span><span aria-hidden="true">↗</span></button><span class="contact-hint">* 실제 연락처를 연결하기 전까지는 안내창이 열립니다.</span></div>
+      </section>
+    </main>
+
+    <section class="biz-info" aria-label="사업자 정보">
+      <div class="biz-head">
+        <span class="section-kicker"><span class="kicker-line"></span> BUSINESS INFO</span>
+        <nav class="biz-links" aria-label="약관 및 정책">
+          <a href="#">이용약관</a>
+          <a href="#"><strong>개인정보처리방침</strong></a>
+          <a href="#">사업자정보확인</a>
+        </nav>
+      </div>
+      <dl class="biz-grid">
+      <!-- 보류 항목(요청 시 다시 추가): 사업자등록번호 / 통신판매업신고 / 개인정보보호책임자
+           <div><dt>사업자등록번호</dt><dd>000-00-00000</dd></div>
+           <div><dt>통신판매업신고</dt><dd>제0000-경기수원-0000호</dd></div>
+           <div><dt>개인정보보호책임자</dt><dd>담당자명</dd></div> -->
+        <div><dt>상호</dt><dd>레몬랩스 (LemonLabs)</dd></div>
+        <div><dt>대표</dt><dd>이진서</dd></div>
+        <div class="biz-wide"><dt>사업장 주소</dt><dd>경기도 수원시 영통구 신원로250번길 53, 영통 아이파크 디어반 1214호</dd></div>
+        <div><dt>대표전화</dt><dd>010-8667-5404</dd></div>
+        <div><dt>이메일</dt><dd>jsleeint@gmail.com</dd></div>
+      </dl>
+    </section>
+
+    <footer class="site-footer"><a class="footer-brand" href="#top" aria-label="레몬랩스 홈페이지 맨 위로"><img class="footer-wordmark wordmark-light" src="assets/lemon-wordmark.png" alt="" height="15"><img class="footer-wordmark wordmark-dark" src="assets/lemon-wordmark-dark.png" alt="" height="15"></a><span>Lab it, Launch it.</span><span>© <span id="year">2026</span> LemonLabs</span><a href="#top" class="back-top">Back to top ↑</a></footer>
+  </div>
+
+  <dialog class="info-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner"><button class="dialog-close" type="button" aria-label="닫기">✕</button><span class="dialog-kicker" id="dialog-kicker">PROJECT / 01</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-meta"><span>FOCUS AREA</span><strong id="dialog-tags"></strong></div><p class="dialog-note">현재 페이지는 프로젝트 소개용 프로토타입입니다. 향후 별도 상세 페이지와 연결할 수 있습니다.</p><button class="dialog-confirm" type="button">확인 <span>↗</span></button></div>
+  </dialog>
+
+  <dialog class="info-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
+    <div class="dialog-inner"><button class="dialog-close" type="button" aria-label="닫기">✕</button><span class="dialog-kicker">LET'S CONNECT</span><h2 id="contact-dialog-title">좋은 이야기를 시작해요.</h2><p>이 시안에는 실제 연락처가 연결되지 않았습니다. 정식 공개 전, <code>index.html</code>의 연락처 버튼을 이메일 주소·문의 폼·SNS 링크 중 하나로 교체해 주세요.</p><p class="dialog-note">현재는 디자인과 버튼 동작을 확인하는 데모입니다.</p><button class="dialog-confirm" type="button">확인 <span>↗</span></button></div>
+  </dialog>
+</body>
+</html>
