@@ -215,13 +215,4 @@ if (document.body.classList.contains('brand-page') && (!location.hash || locatio
     btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
   });
 
-  // Cursor ring.
-  const ring = document.querySelector('.cursor-ring');
-  if (ring) {
-    let tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
-    const tick = () => { cx += (tx - cx) * .18; cy += (ty - cy) * .18; ring.style.left = cx + 'px'; ring.style.top = cy + 'px'; raf = requestAnimationFrame(tick); };
-    window.addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; ring.classList.add('is-on'); if (!raf) tick(); });
-    window.addEventListener('pointerleave', () => ring.classList.remove('is-on'));
-    document.addEventListener('pointerover', e => ring.classList.toggle('is-hover', !!e.target.closest('a, button, .filter-chip, .program-card, .product-card')));
-  }
 })();

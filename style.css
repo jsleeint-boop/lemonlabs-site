@@ -700,13 +700,6 @@ body:has(.reveal.is-visible) .brand-section.reveal:not(.is-visible) .stagger > *
 .brand-section.is-visible .stagger > * { opacity: 1; transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .stagger > :nth-child(1) { transition-delay: .05s; } .stagger > :nth-child(2) { transition-delay: .15s; } .stagger > :nth-child(3) { transition-delay: .25s; } .stagger > :nth-child(4) { transition-delay: .35s; } .stagger > :nth-child(5) { transition-delay: .45s; } .stagger > :nth-child(6) { transition-delay: .55s; }
 
-/* cursor ring (fine pointers only) */
-.cursor-ring { position: fixed; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--brand-accent); pointer-events: none; z-index: 999; translate: -50% -50%; opacity: 0; transition: width .25s, height .25s, opacity .3s, background .25s; mix-blend-mode: multiply; }
-:root[data-theme="dark"] .cursor-ring { mix-blend-mode: screen; }
-.cursor-ring.is-on { opacity: .9; }
-.cursor-ring.is-hover { width: 56px; height: 56px; background: color-mix(in srgb, var(--brand-accent) 18%, transparent); }
-@media (pointer: coarse) { .cursor-ring { display: none; } }
-
 @media (max-width: 960px) {
   .program-grid > :nth-child(n), .product-grid > :nth-child(n), .value-grid > :nth-child(n) { translate: 0 0; }
   .program-grid, .product-grid, .value-grid { padding-bottom: 0; }
