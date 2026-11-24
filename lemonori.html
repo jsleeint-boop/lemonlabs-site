@@ -21,7 +21,7 @@
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20.6 15.2A8.7 8.7 0 0 1 8.8 3.4a8.8 8.8 0 1 0 11.8 11.8Z" stroke-linejoin="round"/></svg>
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="3.8"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M2 12h2m16 0h2M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"/></svg>
         </button>
-        <a class="header-cta" href="#apply">오픈 알림 <span aria-hidden="true">↗&#xFE0E;</span></a>
+        <a class="header-cta magnetic" href="#apply">오픈 알림 <span aria-hidden="true">↗&#xFE0E;</span></a>
         <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="메뉴 열기">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -30,7 +30,8 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden><a href="#about">소개 <span>↗&#xFE0E;</span></a><a href="#products">상품 <span>↗&#xFE0E;</span></a><a href="#store">스토어 <span>↗&#xFE0E;</span></a><a href="#apply">문의 <span>↗&#xFE0E;</span></a><a href="index.html">LemonLabs <span>↗&#xFE0E;</span></a></nav>
 
     <main id="main">
-      <section class="brand-hero tile reveal" aria-label="LEMONori 소개">
+      <section class="brand-hero tile reveal" data-spot aria-label="LEMONori 소개">
+        <div class="hero-spot" aria-hidden="true"></div><span class="hero-watermark" aria-hidden="true">LEMONori</span>
         <div class="brand-hero-copy">
           <div class="eyebrow"><span class="small-spark" aria-hidden="true">✳&#xFE0E;</span> LEMONLABS / PLAY</div>
           <p class="brand-name">LEMONori 레몬놀이</p>
@@ -38,11 +39,11 @@
           <p class="hero-description">내 손 안에서 나만의 세상을 키워보세요.<br>장난감, 생활용품 등 특색 넘치는 제품.</p>
           <div class="hero-tags"><span>장난감</span><span>생활용품</span><span>캐릭터상품</span></div>
           <div class="hero-actions">
-            <a class="primary-button" href="#apply">오픈 알림 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
-            <a class="ghost-button" href="#products">상품 둘러보기</a>
+            <a class="primary-button magnetic" href="#apply">오픈 알림 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+            <a class="ghost-button magnetic" href="#products">상품 둘러보기</a>
           </div>
         </div>
-        <div class="brand-art" aria-hidden="true"><svg class="blocks-svg" viewBox="0 0 300 190" aria-hidden="true">
+        <div class="brand-art" aria-hidden="true" data-tilt="6"><svg class="blocks-svg" viewBox="0 0 300 190" aria-hidden="true">
                 <defs>
                   <radialGradient id="ballGloss" cx="34%" cy="28%" r="72%"><stop offset="0" stop-color="#ffffff" stop-opacity=".7"/><stop offset=".4" stop-color="#9fd8f8" stop-opacity=".1"/><stop offset="1" stop-color="#1f5f8c" stop-opacity=".45"/></radialGradient>
                 </defs>
@@ -68,16 +69,18 @@
               </svg></div>
       </section>
 
-      <section id="about" class="brand-section reveal" aria-labelledby="about-title">
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>LEMONori</span><i aria-hidden="true">✦&#xFE0E;</i><span>PLAY</span><i aria-hidden="true">✦&#xFE0E;</i><span>장난감</span><i aria-hidden="true">✦&#xFE0E;</i><span>생활용품</span><i aria-hidden="true">✦&#xFE0E;</i><span>캐릭터상품</span><i aria-hidden="true">✦&#xFE0E;</i><span>레몬놀이스토어</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONLABS</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONori</span><i aria-hidden="true">✦&#xFE0E;</i><span>PLAY</span><i aria-hidden="true">✦&#xFE0E;</i><span>장난감</span><i aria-hidden="true">✦&#xFE0E;</i><span>생활용품</span><i aria-hidden="true">✦&#xFE0E;</i><span>캐릭터상품</span><i aria-hidden="true">✦&#xFE0E;</i><span>레몬놀이스토어</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONLABS</span><i aria-hidden="true">✦&#xFE0E;</i></div></div>
+
+      <section id="about" class="brand-section reveal" data-num="01" aria-labelledby="about-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> ABOUT LEMONori</p><h2 id="about-title">손 안에서 자라는<br>나만의 세상.</h2></div><p class="section-summary">장난감, 생활용품, 캐릭터상품.<br>일상에 즐거움을 더하는 레몬랩스의 놀이 브랜드입니다.</p></div>
-        <div class="value-grid">
+        <div class="value-grid stagger">
           <div class="value-card"><span class="value-num">01</span><h3>만지면 알게 되는 것</h3><p>쌓고, 굴리고, 끼우며 놀다 보면 생각이 손끝에서 자랍니다.</p></div>
           <div class="value-card"><span class="value-num">02</span><h3>매일 쓰는 즐거움</h3><p>책상과 식탁 위에 작은 레몬 하나. 쓸수록 기분이 좋아지는 생활용품.</p></div>
           <div class="value-card"><span class="value-num">03</span><h3>레몬랩스의 캐릭터</h3><p>레몬과 로켓, 나뭇잎 친구들이 상품으로 찾아갑니다.</p></div>
         </div>
       </section>
 
-      <section id="products" class="brand-section reveal" aria-labelledby="products-title">
+      <section id="products" class="brand-section reveal" data-num="02" aria-labelledby="products-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> PRODUCTS</p><h2 id="products-title">둘러보기</h2></div><p class="section-summary">첫 라인업을 준비하고 있습니다.<br>아래 상품은 예시이며 출시 시 교체됩니다.</p></div>
         <div class="filter-row" role="tablist" aria-label="카테고리">
           <button class="filter-chip is-active" type="button" data-filter="all">전체</button>
@@ -85,38 +88,38 @@
           <button class="filter-chip" type="button" data-filter="생활용품">생활용품</button>
           <button class="filter-chip" type="button" data-filter="캐릭터상품">캐릭터상품</button>
         </div>
-        <div class="product-grid">
-          <article class="product-card" data-cat="장난감">
+        <div class="product-grid stagger">
+          <article class="product-card" data-tilt="4" data-cat="장난감">
             <div class="product-thumb"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M18 58v-18a22 22 0 0 1 44 0v18h-12v-18a10 10 0 0 0-20 0v18z" fill="#fdc71e"/></svg></div>
             <p class="product-cat">장난감</p>
             <h3>나무 블록 세트 · 기본</h3>
             <p class="product-price">가격 미정</p>
             <a class="text-link" href="#store">구매 안내 <span aria-hidden="true">↗&#xFE0E;</span></a>
-          </article><article class="product-card" data-cat="장난감">
+          </article><article class="product-card" data-tilt="4" data-cat="장난감">
             <div class="product-thumb"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="22" fill="#86cdf5"/></svg></div>
             <p class="product-cat">장난감</p>
             <h3>레몬볼 말랑 공</h3>
             <p class="product-price">가격 미정</p>
             <a class="text-link" href="#store">구매 안내 <span aria-hidden="true">↗&#xFE0E;</span></a>
-          </article><article class="product-card" data-cat="장난감">
+          </article><article class="product-card" data-tilt="4" data-cat="장난감">
             <div class="product-thumb"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="14" y="30" width="52" height="22" rx="4" fill="#e8584a"/></svg></div>
             <p class="product-cat">장난감</p>
             <h3>컬러 빌딩 바</h3>
             <p class="product-price">가격 미정</p>
             <a class="text-link" href="#store">구매 안내 <span aria-hidden="true">↗&#xFE0E;</span></a>
-          </article><article class="product-card" data-cat="생활용품">
+          </article><article class="product-card" data-tilt="4" data-cat="생활용품">
             <div class="product-thumb"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M22 24h32v26a8 8 0 0 1-8 8H30a8 8 0 0 1-8-8z" fill="#86cdf5"/><path d="M54 30h6a6 6 0 0 1 0 12h-6" fill="none" stroke="#86cdf5" stroke-width="4"/></svg></div>
             <p class="product-cat">생활용품</p>
             <h3>레몬 머그컵</h3>
             <p class="product-price">가격 미정</p>
             <a class="text-link" href="#store">구매 안내 <span aria-hidden="true">↗&#xFE0E;</span></a>
-          </article><article class="product-card" data-cat="생활용품">
+          </article><article class="product-card" data-tilt="4" data-cat="생활용품">
             <div class="product-thumb"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M18 58C18 36 34 20 62 18c-2 28-18 42-44 40z" fill="#6aa84f"/></svg></div>
             <p class="product-cat">생활용품</p>
             <h3>나뭇잎 코스터 4P</h3>
             <p class="product-price">가격 미정</p>
             <a class="text-link" href="#store">구매 안내 <span aria-hidden="true">↗&#xFE0E;</span></a>
-          </article><article class="product-card" data-cat="캐릭터상품">
+          </article><article class="product-card" data-tilt="4" data-cat="캐릭터상품">
             <div class="product-thumb"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 16l7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z" fill="#fdc71e"/></svg></div>
             <p class="product-cat">캐릭터상품</p>
             <h3>레몬스타 키링</h3>
@@ -126,7 +129,7 @@
         </div>
       </section>
 
-      <section id="store" class="brand-section store-section reveal" aria-labelledby="store-title">
+      <section id="store" class="brand-section store-section reveal" data-num="03" aria-labelledby="store-title">
         <div class="store-card">
           <div>
             <p class="section-kicker"><span class="kicker-line"></span> 레몬놀이스토어</p>
@@ -134,7 +137,7 @@
             <p>정식 스토어 오픈을 준비하고 있습니다. 오픈 소식과 첫 상품 할인 안내를 받고 싶으시면 아래에 연락처를 남겨 주세요.</p>
           </div>
           <div class="store-actions">
-            <a class="primary-button" href="#apply">오픈 알림 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+            <a class="primary-button magnetic" href="#apply">오픈 알림 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
             <a class="ghost-button is-disabled" href="#store" aria-disabled="true">스토어 바로가기 (준비 중)</a>
           </div>
         </div>
@@ -146,7 +149,7 @@
         </dl>
       </section>
 
-<section id="apply" class="brand-section apply-section reveal" aria-labelledby="apply-title">
+<section id="apply" class="brand-section apply-section reveal" data-num="04" aria-labelledby="apply-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> CONTACT</p><h2 id="apply-title">오픈 알림 · 문의</h2></div><p class="section-summary">연락처를 남겨 주시면 스토어 오픈 소식을<br>가장 먼저 알려 드립니다.</p></div>
         <form class="apply-form" novalidate>
           <div class="form-grid">
@@ -158,7 +161,7 @@
           </div>
           <div class="form-actions">
             <label class="form-check"><input type="checkbox" name="agree" required> <span>개인정보 수집·이용에 동의합니다</span></label>
-            <button class="primary-button" type="submit">보내기 <span aria-hidden="true">↗&#xFE0E;</span></button>
+            <button class="primary-button magnetic" type="submit">보내기 <span aria-hidden="true">↗&#xFE0E;</span></button>
           </div>
           <p class="form-note" role="status" aria-live="polite"></p>
           <p class="form-hint">* 정식 오픈 전까지는 내용이 저장되지 않습니다. 급한 문의는 010-8667-5404로 연락해 주세요.</p>
@@ -173,5 +176,6 @@
       <span>© <span id="year">2026</span> LemonLabs</span>
     </footer>
   </div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 </body>
 </html>

@@ -21,7 +21,7 @@
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20.6 15.2A8.7 8.7 0 0 1 8.8 3.4a8.8 8.8 0 1 0 11.8 11.8Z" stroke-linejoin="round"/></svg>
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="3.8"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M2 12h2m16 0h2M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"/></svg>
         </button>
-        <a class="header-cta" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+        <a class="header-cta magnetic" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
         <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="메뉴 열기">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -30,7 +30,8 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden><a href="#about">소개 <span>↗&#xFE0E;</span></a><a href="#programs">프로그램 <span>↗&#xFE0E;</span></a><a href="#how">진행 방식 <span>↗&#xFE0E;</span></a><a href="#faq">FAQ <span>↗&#xFE0E;</span></a><a href="#apply">상담 신청 <span>↗&#xFE0E;</span></a><a href="index.html">LemonLabs <span>↗&#xFE0E;</span></a></nav>
 
     <main id="main">
-      <section class="brand-hero tile reveal" aria-label="nAIté 소개">
+      <section class="brand-hero tile reveal" data-spot aria-label="nAIté 소개">
+        <div class="hero-spot" aria-hidden="true"></div><span class="hero-watermark" aria-hidden="true">nAIté</span>
         <div class="brand-hero-copy">
           <div class="eyebrow"><span class="small-spark" aria-hidden="true">✳&#xFE0E;</span> LEMONLABS / AI EDUCATION</div>
           <p class="brand-name">nAIté 나이테</p>
@@ -38,11 +39,11 @@
           <p class="hero-description">대격변 AI 시대,<br>나이테와 함께 한겹씩 성장해가며<br>내가 원하는 미래를 쟁취하세요.</p>
           <div class="hero-tags"><span>초중등 클래스</span><span>IoT 클래스</span><span>메타인지 테스트</span></div>
           <div class="hero-actions">
-            <a class="primary-button" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
-            <a class="ghost-button" href="#programs">프로그램 보기</a>
+            <a class="primary-button magnetic" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+            <a class="ghost-button magnetic" href="#programs">프로그램 보기</a>
           </div>
         </div>
-        <div class="brand-art" aria-hidden="true"><svg class="talk-svg" viewBox="0 0 360 300">
+        <div class="brand-art" aria-hidden="true" data-tilt="6"><svg class="talk-svg" viewBox="0 0 360 300">
                 <ellipse cx="75" cy="276" rx="62" ry="6" fill="#000" opacity=".28"/>
                 <ellipse cx="306" cy="270" rx="38" ry="6" fill="#000" opacity=".28"/>
                 <rect x="118" y="30" width="150" height="130" rx="6" fill="#b98a4a"/>
@@ -93,33 +94,35 @@
               </svg></div>
       </section>
 
-      <section id="about" class="brand-section reveal" aria-labelledby="about-title">
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>nAIté</span><i aria-hidden="true">✦&#xFE0E;</i><span>AI EDUCATION</span><i aria-hidden="true">✦&#xFE0E;</i><span>초중등 클래스</span><i aria-hidden="true">✦&#xFE0E;</i><span>IoT 클래스</span><i aria-hidden="true">✦&#xFE0E;</i><span>메타인지 테스트</span><i aria-hidden="true">✦&#xFE0E;</i><span>한 겹씩 성장</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONLABS</span><i aria-hidden="true">✦&#xFE0E;</i><span>nAIté</span><i aria-hidden="true">✦&#xFE0E;</i><span>AI EDUCATION</span><i aria-hidden="true">✦&#xFE0E;</i><span>초중등 클래스</span><i aria-hidden="true">✦&#xFE0E;</i><span>IoT 클래스</span><i aria-hidden="true">✦&#xFE0E;</i><span>메타인지 테스트</span><i aria-hidden="true">✦&#xFE0E;</i><span>한 겹씩 성장</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONLABS</span><i aria-hidden="true">✦&#xFE0E;</i></div></div>
+
+      <section id="about" class="brand-section reveal" data-num="01" aria-labelledby="about-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> ABOUT nAIté</p><h2 id="about-title">나이테처럼,<br>한 겹씩 단단하게.</h2></div><p class="section-summary">대격변 AI 시대, 나이테와 함께 한겹씩 성장해가며<br>내가 원하는 미래를 쟁취하세요.</p></div>
-        <div class="value-grid">
+        <div class="value-grid stagger">
           <div class="value-card"><span class="value-num">01</span><h3>도구가 아니라 습관</h3><p>AI를 쓰는 요령보다, AI와 함께 생각하고 검토하는 습관을 몸에 붙입니다.</p></div>
           <div class="value-card"><span class="value-num">02</span><h3>작게 만들고 자주 보여주기</h3><p>모든 과정은 손에 잡히는 결과물로 끝납니다. 발표와 피드백이 수업의 일부입니다.</p></div>
           <div class="value-card"><span class="value-num">03</span><h3>나를 아는 공부</h3><p>메타인지 진단으로 출발점을 확인하고, 아이에게 맞는 속도로 나아갑니다.</p></div>
         </div>
       </section>
 
-      <section id="programs" class="brand-section reveal" aria-labelledby="programs-title">
+      <section id="programs" class="brand-section reveal" data-num="02" aria-labelledby="programs-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> PROGRAMS</p><h2 id="programs-title">nAIté 프로그램</h2></div><p class="section-summary">세 가지 과정은 따로 들어도 되고,<br>진단 → 클래스 → 프로젝트 순으로 이어 들을 수도 있습니다.</p></div>
-        <div class="program-grid">
-          <article class="program-card" id="class">
+        <div class="program-grid stagger">
+          <article class="program-card" data-tilt="4" id="class">
             <p class="card-kicker">PROGRAM 01</p>
             <h3>nAIté 초중등 클래스</h3>
             <p>AI를 처음 만나는 초·중학생을 위한 기초 과정입니다. 생성형 AI와 대화하는 법부터 프롬프트 작성, 결과를 검토하고 자기 생각으로 다듬는 습관까지 놀이처럼 익힙니다.</p>
             <ul class="fact-list"><li><span>대상</span><strong>초등 4학년 ~ 중학생</strong></li><li><span>형태</span><strong>소그룹 (4~8명)</strong></li><li><span>기간</span><strong>8주 과정 · 주 1회</strong></li><li><span>장소</span><strong>수원 영통 · 온라인 병행</strong></li></ul>
             <a class="text-link" href="#apply">상담 신청하기 <span aria-hidden="true">↗&#xFE0E;</span></a>
           </article>
-          <article class="program-card" id="iot">
+          <article class="program-card" data-tilt="4" id="iot">
             <p class="card-kicker">PROGRAM 02</p>
             <h3>nAIté IoT 클래스</h3>
             <p>센서와 보드를 직접 연결하고 AI와 함께 코드를 짜면서, 생각한 것을 손으로 움직이는 결과물로 만드는 과정입니다. 매 기수 작은 발명 프로젝트로 마무리합니다.</p>
             <ul class="fact-list"><li><span>대상</span><strong>중학생 ~ 고등학생</strong></li><li><span>형태</span><strong>프로젝트 팀 (2~3명)</strong></li><li><span>기간</span><strong>12주 과정 · 주 1회</strong></li><li><span>준비물</span><strong>키트 제공</strong></li></ul>
             <a class="text-link" href="#apply">상담 신청하기 <span aria-hidden="true">↗&#xFE0E;</span></a>
           </article>
-          <article class="program-card" id="metacognition">
+          <article class="program-card" data-tilt="4" id="metacognition">
             <p class="card-kicker">PROGRAM 03</p>
             <h3>nAIté 메타인지 테스트</h3>
             <p>내가 무엇을 알고 무엇을 모르는지 스스로 파악하는 힘을 측정하고 키웁니다. 진단 테스트와 1:1 리포트, 학습 전략 상담이 한 세트로 제공됩니다.</p>
@@ -129,9 +132,9 @@
         </div>
       </section>
 
-      <section id="how" class="brand-section reveal" aria-labelledby="how-title">
+      <section id="how" class="brand-section reveal" data-num="03" aria-labelledby="how-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> HOW IT WORKS</p><h2 id="how-title">신청부터 수업까지</h2></div></div>
-        <ol class="step-flow">
+        <ol class="step-flow stagger">
           <li><span>1</span><strong>상담 신청</strong><p>아래 양식으로 신청하면 1~2일 안에 연락드립니다.</p></li>
           <li><span>2</span><strong>진단 & 배정</strong><p>간단한 진단으로 출발점을 확인하고 맞는 반을 안내합니다.</p></li>
           <li><span>3</span><strong>수업 시작</strong><p>기수 일정에 맞춰 시작하고, 매주 학습 기록을 공유합니다.</p></li>
@@ -139,9 +142,9 @@
         </ol>
       </section>
 
-      <section id="faq" class="brand-section reveal" aria-labelledby="faq-title">
+      <section id="faq" class="brand-section reveal" data-num="04" aria-labelledby="faq-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> FAQ</p><h2 id="faq-title">자주 묻는 질문</h2></div></div>
-        <div class="faq-list">
+        <div class="faq-list stagger">
           <details><summary>코딩을 전혀 몰라도 들을 수 있나요?</summary><p>네. 초중등 클래스는 코딩 경험이 없는 학생을 기준으로 설계되어 있습니다. IoT 클래스는 초중등 클래스 수료자나 기초 경험이 있는 학생에게 권합니다.</p></details>
           <details><summary>수업은 어디에서 진행되나요?</summary><p>수원 영통 교육장에서 진행하며, 일부 과정은 온라인으로도 참여할 수 있습니다. 상담 시 안내해 드립니다.</p></details>
           <details><summary>메타인지 테스트만 따로 받을 수 있나요?</summary><p>가능합니다. 진단과 1:1 상담만 단독으로 신청할 수 있습니다.</p></details>
@@ -149,7 +152,7 @@
         </div>
       </section>
 
-<section id="apply" class="brand-section apply-section reveal" aria-labelledby="apply-title">
+<section id="apply" class="brand-section apply-section reveal" data-num="05" aria-labelledby="apply-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> APPLY</p><h2 id="apply-title">상담 신청</h2></div><p class="section-summary">아이의 학년과 관심사만 알려주시면<br>맞는 과정을 함께 찾아 드립니다.</p></div>
         <form class="apply-form" novalidate>
           <div class="form-grid">
@@ -161,7 +164,7 @@
           </div>
           <div class="form-actions">
             <label class="form-check"><input type="checkbox" name="agree" required> <span>개인정보 수집·이용에 동의합니다</span></label>
-            <button class="primary-button" type="submit">상담 신청 보내기 <span aria-hidden="true">↗&#xFE0E;</span></button>
+            <button class="primary-button magnetic" type="submit">상담 신청 보내기 <span aria-hidden="true">↗&#xFE0E;</span></button>
           </div>
           <p class="form-note" role="status" aria-live="polite"></p>
           <p class="form-hint">* 정식 오픈 전까지는 신청 내용이 저장되지 않습니다. 급한 문의는 010-8667-5404로 연락해 주세요.</p>
@@ -176,5 +179,6 @@
       <span>© <span id="year">2026</span> LemonLabs</span>
     </footer>
   </div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 </body>
 </html>

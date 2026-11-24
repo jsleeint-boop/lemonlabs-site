@@ -21,7 +21,7 @@
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20.6 15.2A8.7 8.7 0 0 1 8.8 3.4a8.8 8.8 0 1 0 11.8 11.8Z" stroke-linejoin="round"/></svg>
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="3.8"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M2 12h2m16 0h2M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"/></svg>
         </button>
-        <a class="header-cta" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+        <a class="header-cta magnetic" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
         <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="메뉴 열기">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -30,7 +30,8 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden><a href="#about">소개 <span>↗&#xFE0E;</span></a><a href="#essay">논술연구소 <span>↗&#xFE0E;</span></a><a href="#scc">SCC 캠프 <span>↗&#xFE0E;</span></a><a href="#events">설명회 <span>↗&#xFE0E;</span></a><a href="#apply">신청 <span>↗&#xFE0E;</span></a><a href="index.html">LemonLabs <span>↗&#xFE0E;</span></a></nav>
 
     <main id="main">
-      <section class="brand-hero tile reveal" aria-label="narU 소개">
+      <section class="brand-hero tile reveal" data-spot aria-label="narU 소개">
+        <div class="hero-spot" aria-hidden="true"></div><span class="hero-watermark" aria-hidden="true">narU</span>
         <div class="brand-hero-copy">
           <div class="eyebrow"><span class="small-spark" aria-hidden="true">✳&#xFE0E;</span> LEMONLABS / COLLEGE</div>
           <p class="brand-name">narU 나루</p>
@@ -38,11 +39,11 @@
           <p class="hero-description">논술의 기본기부터 집중 캠프, 진로 설계까지.<br>한 사람의 길에 맞춘 입시 연구소입니다.</p>
           <div class="hero-tags"><span>나루논술연구소</span><span>나루크루즈캠프 SCC</span><span>입시 설명회</span></div>
           <div class="hero-actions">
-            <a class="primary-button" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
-            <a class="ghost-button" href="#events">설명회 일정</a>
+            <a class="primary-button magnetic" href="#apply">상담 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+            <a class="ghost-button magnetic" href="#events">설명회 일정</a>
           </div>
         </div>
-        <div class="brand-art" aria-hidden="true"><svg class="studio-scene" viewBox="0 0 200 170">
+        <div class="brand-art" aria-hidden="true" data-tilt="6"><svg class="studio-scene" viewBox="0 0 200 170">
                 <defs><linearGradient id="boardShine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d4fa2"/><stop offset="1" stop-color="#1b2344"/></linearGradient></defs>
                 <g class="scroll" transform="rotate(20 146 104)">
                   <rect x="128" y="48" width="36" height="106" rx="4" fill="#f5eed6" stroke="#cdbd8f" stroke-width="1.5"/>
@@ -65,33 +66,35 @@
               </svg></div>
       </section>
 
-      <section id="about" class="brand-section reveal" aria-labelledby="about-title">
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>narU</span><i aria-hidden="true">✦&#xFE0E;</i><span>COLLEGE</span><i aria-hidden="true">✦&#xFE0E;</i><span>나루논술연구소</span><i aria-hidden="true">✦&#xFE0E;</i><span>나루크루즈캠프 SCC</span><i aria-hidden="true">✦&#xFE0E;</i><span>입시 설명회</span><i aria-hidden="true">✦&#xFE0E;</i><span>함께 건너는 길</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONLABS</span><i aria-hidden="true">✦&#xFE0E;</i><span>narU</span><i aria-hidden="true">✦&#xFE0E;</i><span>COLLEGE</span><i aria-hidden="true">✦&#xFE0E;</i><span>나루논술연구소</span><i aria-hidden="true">✦&#xFE0E;</i><span>나루크루즈캠프 SCC</span><i aria-hidden="true">✦&#xFE0E;</i><span>입시 설명회</span><i aria-hidden="true">✦&#xFE0E;</i><span>함께 건너는 길</span><i aria-hidden="true">✦&#xFE0E;</i><span>LEMONLABS</span><i aria-hidden="true">✦&#xFE0E;</i></div></div>
+
+      <section id="about" class="brand-section reveal" data-num="01" aria-labelledby="about-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> ABOUT narU</p><h2 id="about-title">나루는 강을 건너는 자리,<br>진학은 함께 건너는 길.</h2></div><p class="section-summary">narU는 대학 진학을 준비하는 학생을 위한<br>레몬랩스의 입시 연구소입니다.</p></div>
-        <div class="value-grid">
+        <div class="value-grid stagger">
           <div class="value-card"><span class="value-num">01</span><h3>논술·글쓰기 기본기</h3><p>읽고, 구조를 세우고, 근거를 갖춰 쓰는 훈련을 반복합니다.</p></div>
           <div class="value-card"><span class="value-num">02</span><h3>집중 캠프</h3><p>짧은 기간에 실전 감각을 끌어올리는 나루크루즈캠프 SCC.</p></div>
           <div class="value-card"><span class="value-num">03</span><h3>한 사람에게 맞춘 안내</h3><p>학생마다 다른 출발점과 목표에 맞춰 진로와 전형을 함께 설계합니다.</p></div>
         </div>
       </section>
 
-      <section id="essay" class="brand-section reveal" aria-labelledby="essay-title">
+      <section id="essay" class="brand-section reveal" data-num="02" aria-labelledby="essay-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> 나루논술연구소</p><h2 id="essay-title">생각을 글로,<br>글을 합격으로.</h2></div><p class="section-summary">대학별 논술 전형에 맞춘 정규 과정과<br>단기 특강을 운영합니다.</p></div>
-        <div class="program-grid">
-          <article class="program-card" id="essay-regular">
+        <div class="program-grid stagger">
+          <article class="program-card" data-tilt="4" id="essay-regular">
             <p class="card-kicker">COURSE 01</p>
             <h3>정규 논술 과정</h3>
             <p>독해, 요약, 논증, 서술의 네 단계를 매주 순환하며 글의 틀을 몸에 익힙니다. 매 회 첨삭과 재작성이 포함됩니다.</p>
             <ul class="fact-list"><li><span>대상</span><strong>고등학생</strong></li><li><span>형태</span><strong>소그룹 (6명 이내)</strong></li><li><span>기간</span><strong>16주 · 주 1회 3시간</strong></li><li><span>첨삭</span><strong>매회 1:1 첨삭</strong></li></ul>
             <a class="text-link" href="#apply">상담 신청하기 <span aria-hidden="true">↗&#xFE0E;</span></a>
           </article>
-          <article class="program-card" id="essay-intensive">
+          <article class="program-card" data-tilt="4" id="essay-intensive">
             <p class="card-kicker">COURSE 02</p>
             <h3>대학별 파이널 특강</h3>
             <p>지원 대학의 최근 기출을 중심으로 출제 경향을 분석하고 실전 모의 논술을 치릅니다.</p>
             <ul class="fact-list"><li><span>대상</span><strong>고3 · N수생</strong></li><li><span>형태</span><strong>대학별 분반</strong></li><li><span>기간</span><strong>4주 · 주 2회</strong></li><li><span>시기</span><strong>9월 ~ 11월</strong></li></ul>
             <a class="text-link" href="#apply">상담 신청하기 <span aria-hidden="true">↗&#xFE0E;</span></a>
           </article>
-          <article class="program-card" id="essay-diagnosis">
+          <article class="program-card" data-tilt="4" id="essay-diagnosis">
             <p class="card-kicker">COURSE 03</p>
             <h3>논술 진단 & 로드맵</h3>
             <p>한 편의 글을 쓰고, 현재 수준과 보완 순서를 담은 로드맵을 받습니다. 정규 과정 전 첫 걸음으로 권합니다.</p>
@@ -101,7 +104,7 @@
         </div>
       </section>
 
-      <section id="scc" class="brand-section reveal" aria-labelledby="scc-title">
+      <section id="scc" class="brand-section reveal" data-num="03" aria-labelledby="scc-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> 나루크루즈캠프 SCC</p><h2 id="scc-title">한 번 올라타면<br>끝까지 간다.</h2></div><p class="section-summary">방학마다 열리는 집중 캠프.<br>학습, 멘토링, 진로 설계를 한 항해로 묶었습니다.</p></div>
         <div class="camp-layout">
           <div class="camp-copy">
@@ -112,7 +115,7 @@
               <li><span>형태</span><strong>4박 5일 합숙 (예정)</strong></li>
               <li><span>정원</span><strong>기수당 30명</strong></li>
             </ul>
-            <a class="primary-button" href="#apply">캠프 사전 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
+            <a class="primary-button magnetic" href="#apply">캠프 사전 신청 <span aria-hidden="true">↗&#xFE0E;</span></a>
           </div>
           <table class="schedule-table">
             <caption>다음 기수 일정 (예정)</caption>
@@ -125,15 +128,15 @@
         </div>
       </section>
 
-      <section id="events" class="brand-section reveal" aria-labelledby="events-title">
+      <section id="events" class="brand-section reveal" data-num="04" aria-labelledby="events-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> 설명회</p><h2 id="events-title">입시 설명회</h2></div><p class="section-summary">학부모와 학생이 함께 듣는 무료 설명회.<br>전형 흐름과 narU 과정을 소개합니다.</p></div>
-        <ul class="event-list">
+        <ul class="event-list stagger">
           <li><span class="event-date"><strong>일정 미정</strong><small>2026 하반기</small></span><div><strong>narU 입시 설명회 · 논술 편</strong><p>논술 전형의 구조와 준비 순서, 나루논술연구소 과정 안내</p></div><a class="text-link" href="#apply">참석 신청 <span aria-hidden="true">↗&#xFE0E;</span></a></li>
           <li><span class="event-date"><strong>일정 미정</strong><small>2026 하반기</small></span><div><strong>나루크루즈캠프 SCC 설명회</strong><p>캠프 일정과 커리큘럼, 지난 기수 후기</p></div><a class="text-link" href="#apply">참석 신청 <span aria-hidden="true">↗&#xFE0E;</span></a></li>
         </ul>
       </section>
 
-<section id="apply" class="brand-section apply-section reveal" aria-labelledby="apply-title">
+<section id="apply" class="brand-section apply-section reveal" data-num="05" aria-labelledby="apply-title">
         <div class="section-heading"><div><p class="section-kicker"><span class="kicker-line"></span> APPLY</p><h2 id="apply-title">상담 · 참석 신청</h2></div><p class="section-summary">학년과 목표 대학, 관심 과정을 적어 주시면<br>맞는 방향을 안내해 드립니다.</p></div>
         <form class="apply-form" novalidate>
           <div class="form-grid">
@@ -145,7 +148,7 @@
           </div>
           <div class="form-actions">
             <label class="form-check"><input type="checkbox" name="agree" required> <span>개인정보 수집·이용에 동의합니다</span></label>
-            <button class="primary-button" type="submit">신청 보내기 <span aria-hidden="true">↗&#xFE0E;</span></button>
+            <button class="primary-button magnetic" type="submit">신청 보내기 <span aria-hidden="true">↗&#xFE0E;</span></button>
           </div>
           <p class="form-note" role="status" aria-live="polite"></p>
           <p class="form-hint">* 정식 오픈 전까지는 신청 내용이 저장되지 않습니다. 급한 문의는 010-8667-5404로 연락해 주세요.</p>
@@ -160,5 +163,6 @@
       <span>© <span id="year">2026</span> LemonLabs</span>
     </footer>
   </div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 </body>
 </html>

@@ -158,3 +158,70 @@ if (document.body.classList.contains('brand-page') && (!location.hash || locatio
   window.scrollTo(0, 0);
   window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
 }
+
+// Brand pages v2: pointer-reactive motion (fine pointers only, respects reduced motion).
+(() => {
+  const body = document.body;
+  if (!body.classList.contains('brand-page')) return;
+  const fine = window.matchMedia('(pointer: fine)').matches;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scrollspy for the desktop nav.
+  const navLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"]')];
+  const targets = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if ('IntersectionObserver' in window && targets.length) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id));
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    targets.forEach(t => spy.observe(t));
+  }
+
+  if (!fine || reduce) return;
+
+  // Hero spotlight follows the pointer.
+  document.querySelectorAll('[data-spot]').forEach(el => {
+    el.addEventListener('pointermove', e => {
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${((e.clientX - r.left) / r.width * 100).toFixed(1)}%`);
+      el.style.setProperty('--my', `${((e.clientY - r.top) / r.height * 100).toFixed(1)}%`);
+    });
+  });
+
+  // 3D tilt toward the pointer.
+  document.querySelectorAll('[data-tilt]').forEach(el => {
+    const max = parseFloat(el.dataset.tilt) || 5;
+    const target = el.matches('.brand-art') ? el.querySelector('svg') : el;
+    if (!target) return;
+    el.addEventListener('pointermove', e => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      target.style.transform = `perspective(900px) rotateX(${(-y * max).toFixed(2)}deg) rotateY(${(x * max).toFixed(2)}deg) translateY(-6px)`;
+    });
+    el.addEventListener('pointerleave', () => { target.style.transform = ''; });
+  });
+
+  // Magnetic buttons.
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    btn.addEventListener('pointermove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - (r.left + r.width / 2);
+      const y = e.clientY - (r.top + r.height / 2);
+      btn.style.transform = `translate(${(x * .18).toFixed(1)}px, ${(y * .25).toFixed(1)}px)`;
+    });
+    btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+  });
+
+  // Cursor ring.
+  const ring = document.querySelector('.cursor-ring');
+  if (ring) {
+    let tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+    const tick = () => { cx += (tx - cx) * .18; cy += (ty - cy) * .18; ring.style.left = cx + 'px'; ring.style.top = cy + 'px'; raf = requestAnimationFrame(tick); };
+    window.addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; ring.classList.add('is-on'); if (!raf) tick(); });
+    window.addEventListener('pointerleave', () => ring.classList.remove('is-on'));
+    document.addEventListener('pointerover', e => ring.classList.toggle('is-hover', !!e.target.closest('a, button, .filter-chip, .program-card, .product-card')));
+  }
+})();
